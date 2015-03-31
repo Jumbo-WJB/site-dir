@@ -1,5 +1,9 @@
 #!/usr/bin/python
 # -*- coding:utf-8 -*-
+'''
+Author:Jumbo
+Website:http://www.chinabaiker.com
+'''
 import requests,sys
 try:
 	url = sys.argv[1]
