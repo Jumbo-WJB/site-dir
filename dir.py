@@ -25,21 +25,21 @@ try:
 			y = b.strip()
 			sn = requests.get(str(url) + str(x))
 			if sn.status_code == 200:
-				print 'the urls :\n' + sm.url + ' found - 200'
+				print 'the urls :\n' + sn.url + ' found - 200'
 			elif sn.status_code == 403:
-				print 'the urls :\n' + sm.url + ' found - 403'
+				print 'the urls :\n' + sn.url + ' found - 403'
 			elif sn.status_code == 404:
-				print 'the urls :\n' + sm.url + ' no found - 404'
+				print 'the urls :\n' + sn.url + ' no found - 404'
 	elif payload == 'jsp':
 		for c in open('jsp.txt','r'):
 			z = c.strip()
 			so = requests.get(str(url) + str(x))
 			if so.status_code == 200:
-				print 'the urls :\n' + sm.url + ' found - 200'
+				print 'the urls :\n' + so.url + ' found - 200'
 			elif so.status_code == 403:
-				print 'the urls :\n' + sm.url + ' found - 403'
+				print 'the urls :\n' + so.url + ' found - 403'
 			elif so.status_code == 404:
-				print 'the urls :\n' + sm.url + ' no found - 404'
+				print 'the urls :\n' + so.url + ' no found - 404'
 	elif payload == 'aspx':
 		for d in open('aspx.txt','r'):
 			w = d.strip()
