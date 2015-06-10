@@ -45,10 +45,10 @@ try:
 			w = d.strip()
 			sp = requests.get(str(url) + str(x))
 			if sp.status_code == 200:
-				print 'the urls :\n' + sm.url + ' found - 200'
+				print 'the urls :\n' + sp.url + ' found - 200'
 			elif sp.status_code == 403:
-				print 'the urls :\n' + sm.url + ' found - 403'
+				print 'the urls :\n' + sp.url + ' found - 403'
 			elif sp.status_code == 404:
-				print 'the urls :\n' + sm.url + ' no found - 404'
+				print 'the urls :\n' + sp.url + ' no found - 404'
 except:
 	print ("usage: %s www.chinabaiker.com php(asp,aspx,jsp)" % sys.argv[0])
