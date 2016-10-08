@@ -21,7 +21,7 @@ try:
     if payload == 'php':
         for a in open('php.txt','r'):
             x = a.strip()
-            sm = requests.get(str(url) + str(x))
+            sm = requests.get(str(url) + str(x),allow_redirects = False)
             body = BeautifulSoup(sm.text)
             body = str(body)
             match = zhPattern.search(body)
@@ -37,7 +37,7 @@ try:
     elif payload == 'asp':
         for b in open('asp.txt','r'):
             y = b.strip()
-            sn = requests.get(str(url) + str(y))
+            sn = requests.get(str(url) + str(y),allow_redirects = False)
             body = BeautifulSoup(sn.text)
             body = str(body)
             match = zhPattern.search(body)
@@ -52,7 +52,7 @@ try:
     elif payload == 'jsp':
         for c in open('jsp.txt','r'):
             z = c.strip()
-            so = requests.get(str(url) + str(z))
+            so = requests.get(str(url) + str(z),allow_redirects = False)
             body = BeautifulSoup(so.text)
             body = str(body)
             match = zhPattern.search(body)
@@ -67,7 +67,7 @@ try:
     elif payload == 'aspx':
         for d in open('aspx.txt','r'):
             w = d.strip()
-            sp = requests.get(str(url) + str(w))
+            sp = requests.get(str(url) + str(w),allow_redirects = False)
             body = BeautifulSoup(sp.text)
             body = str(body)
             match = zhPattern.search(body)
@@ -82,7 +82,7 @@ try:
     else:
         for da in open(payload,'r'):
             wa = da.strip()
-            spa = requests.get(str(url) + str(wa))
+            spa = requests.get(str(url) + str(wa),allow_redirects = False)
             body = BeautifulSoup(spa.text)
             body = str(body)
             match = zhPattern.search(body)
